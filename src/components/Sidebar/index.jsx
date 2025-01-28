@@ -1,4 +1,3 @@
-// components/Sidebar/index.jsx
 import {
     Box,
     Input,
@@ -19,7 +18,6 @@ import {
     const [loading, setLoading] = useState(false)
     const [hasMore, setHasMore] = useState(true)
   
-    // Debounce search input
     useEffect(() => {
       const timerId = setTimeout(() => {
         setDebouncedSearch(searchTerm)
@@ -28,7 +26,6 @@ import {
       return () => clearTimeout(timerId)
     }, [searchTerm])
   
-    // Reset pagination when search changes
     useEffect(() => {
       setPage(1)
       setUsers([])
